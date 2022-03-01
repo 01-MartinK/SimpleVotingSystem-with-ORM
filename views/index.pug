@@ -1,0 +1,16 @@
+extends default
+
+block content
+    div.container
+        div.loginBox
+            h1 Enter Credentials
+            form(method="post" action="/login")
+                label Eesnimi:
+                input(type="text" name="firstName" placeholder="sisestage Eesnimi")
+                label Perenimi:
+                input(type="text" name="familyName" placeholder="sisestage Perenimi")
+                label Email:
+                input(type="text" name="email" placeholder="sisestage Email")
+                label Isikukood:
+                input(type="text" name="identity_id" placeholder="sisestage kellegi suvalise isikukoodi")
+                input(type="submit" value="Start Voting")#submitCredentials

@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.msg {
+    display: block;
+    position: absolute;
+    margin: auto auto;
+    text-align: center;
+}
+
+/*        LOGIN      */
+
+.loginBox {
+    background-color: antiquewhite;
+    margin: 2em auto;
+    width: 25%;
+    padding: 2em;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 2px 4px 4px gainsboro;
+}
+
+.loginBox h1 {
+    margin-bottom: 1rem;
+}
+
+.loginBox form label {
+    margin-bottom: 0.5em;
+    display: block;
+    font-size: large;
+}
+
+.loginBox form input {
+    margin-bottom: 1.25rem;
+    width: 95%;
+    padding: 0.5em;
+    height: 2em;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.loginBox #submitCredentials {
+    font-size: small;
+    margin-bottom: 0;
+    margin: auto auto;
+    margin-top: 1em;
+    height: 3em;
+    width: 16em;
+    display: block;
+    text-align: center;
+}
+
+
+.loginBox #submitCredentials:hover {
+    font-size: medium;
+    background-color: ghostwhite;
+    border: 1px solid black;
+}
+
+/* VOTING BOX */
+
+.votingBox {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.votingBox #firstBox button{
+    border-radius: 4px;
+    margin-bottom: auto;
+    margin: 0 4em;
+    width: 24rem;
+    height: 24rem;
+    background: url('https://www.pngitem.com/pimgs/m/40-405973_red-thumbs-down-png-png-download-thumbs-down.png');
+    background-size: cover;
+}
+
+.votingBox #timerBox {
+    font-size: xx-large;
+}
+
+.votingBox #secondBox button {
+    border-radius: 4px;
+    margin-bottom: auto;
+    margin: 0 4em;
+    width: 24rem;
+    height: 24rem;
+    background: url('https://www.pngitem.com/pimgs/m/174-1746326_green-thumbs-up-icon-hd-png-download.png');
+    background-size: cover;
+}
+
+/*          Result            */
+.answers {
+    display:flex;
+    margin: auto auto;
+    width: 50%;
+}
+
+.answers h1 {
+    font-size: xx-large;
+    padding: 3em;
+}
+
+#backBtn {
+    margin-top: 2em;
+    padding: 1em;
+    font-size: larger;
+    text-decoration: none;
+}
