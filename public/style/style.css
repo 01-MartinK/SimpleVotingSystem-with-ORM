@@ -4,7 +4,30 @@
 }
 
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/*      sizes        */
+
+.big {
+    font-size: 16vh;
+}
+
+.medium {
+    font-size: 12vh;
+}
+
+.small {
+    font-size: 8vh;
+}
+
+.red {
+    color: maroon;
+}
+
+.green {
+    color: green;
 }
 
 .msg {
@@ -13,6 +36,7 @@ body {
     margin: auto auto;
     text-align: center;
 }
+
 
 /*        LOGIN      */
 
@@ -56,12 +80,17 @@ body {
     text-align: center;
 }
 
-
 .loginBox #submitCredentials:hover {
     font-size: medium;
     background-color: ghostwhite;
     border: 1px solid black;
 }
+
+#viewResults {
+    display: block;
+    margin: auto auto;
+}
+
 
 /* VOTING BOX */
 
@@ -71,7 +100,7 @@ body {
     justify-content: center;
 }
 
-.votingBox #firstBox button{
+.votingBox #firstBox button {
     border-radius: 4px;
     margin-bottom: auto;
     margin: 0 4em;
@@ -95,16 +124,20 @@ body {
     background-size: cover;
 }
 
+
 /*          Result            */
+
 .answers {
-    display:flex;
+    display: flex;
     margin: auto auto;
-    width: 50%;
+    width: 75%;
+    text-align: center;
 }
 
 .answers h1 {
     font-size: xx-large;
     padding: 3em;
+    text-align: center;
 }
 
 #backBtn {

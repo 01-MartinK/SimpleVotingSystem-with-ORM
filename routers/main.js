@@ -8,15 +8,16 @@ const peopleController = require('../controllers/people')
 // getttt
 router.get('/', (req, res) => {
     res.render('index', {
-      title: 'login'
+        title: 'login'
     });
 });
-router.get('/voting', peopleController.getPersonTimeAndVote);
+
+router.get('/voting', peopleController.getPersonTime);
 router.get('/result', votesController.getAllVotes)
 
 
 // requests
 router.post('/login', peopleController.addPerson, peopleController.logPerson);
-router.post('/answer',  votesController.logVote, peopleController.logPerson)
+router.post('/answer', votesController.logVote, peopleController.logPerson);
 
 module.exports = router;

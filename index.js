@@ -19,9 +19,9 @@ const http = require('http');
 const res = require('express/lib/response');
 const { redirect } = require('express/lib/response');
 
-/* BROKEN MYSQL SERVER
+/*
 const con = mysql.createConnection({
-    host: "193.40.62.9",
+    host: "localhost",
     user: "kyttmartin",
     password: "XvTR5TCDPQxZ",
     database: "kyttmartin_ABS",
@@ -48,10 +48,21 @@ app.post('/login', (req, res) => {
   let familyName = req.body.familyName;
   let email = req.body.email;
   let id = req.body.identity_id;
+  let cur_time = new Date().getMinutes;
 
   console.log(firstName + " " + familyName + " " + email + " " + id)
 
-  res.redirect('/voting')
+  // check if name in system
+  let query; // name
+  if (firstName == query) {
+    query = 'last time';
+    let last_time; // query last time
+    // check if voting time expired
+    if ((last_time - cur_time) > 5) res.redirect('/voting');
+    else res.redirect('/result');
+  }
+  else res.redirect('/voting');
+  
 });
 
 app.post('/answer', (req, res) => {
