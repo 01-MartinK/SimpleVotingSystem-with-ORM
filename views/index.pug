@@ -11,5 +11,13 @@ block content
                 input(type="text" name="familyName" placeholder="sisestage Perenimi")
                 label Email:
                 input(type="text" name="email" placeholder="sisestage Email")
-                input(type="submit" value="Start Voting")#submitCredentials
-        a(href="results")#viewResults view results
+                br
+                br
+                label.center.big Haaleta
+                div#voteBox
+                    label poolt
+                    input(type="radio" name="vote" id="with" value="poolt")
+                    label vastu
+                    input(type="radio" name="vote" id="against" value="vastu")
+                input(type="submit" value="Haaleta")#submitCredentials
+            a(href="result")#viewResults.center vaata tulemusi

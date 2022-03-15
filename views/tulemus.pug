@@ -4,10 +4,12 @@ block content
     
     div.container
         a(href="/")#backBtn <- back to credentials
+        form(method="post" action="/restart")
+            input(type='submit' value='Alusta uue haaletuse')
         div.answers
             h1 voted against 
-                span.big.red #{againstPerson} 22
+                span.big.red #{againstPerson}
             h1 all votes 
-                span.small #{allVotes} 54
+                span.small #{allVotes}
             h1 voted with 
-                span.big.green #{withPerson} 32
+                span.big.green #{withPerson}

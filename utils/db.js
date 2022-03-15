@@ -2,10 +2,10 @@ const mysql = require('mysql');
 
 // just input local mysql database
 const db = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : '778Iv23N',
-    database: "yoga_mysql"
+    host: 'localhost',
+    user: 'root',
+    password: '778Iv23N',
+    database: "VOTING"
 });
 
 module.exports = db;
