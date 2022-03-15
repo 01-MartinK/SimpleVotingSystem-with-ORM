@@ -7,6 +7,7 @@ const res = require('express/lib/response');
 const con = require('../utils/db');
 
 let voting_ended = false
+let voting_started = false
 
 // getttt
 router.get('/', (req, res) => {
@@ -21,7 +22,17 @@ router.get('/', (req, res) => {
 router.get('/result', votesController.getAllVotes)
 
 // requests
-router.post('/login', votesController.castVote);
+router.post('/login', (req, res) => {
+    if (!voting_ended)
+        votesController.castVote(req, res);
+    else
+        res.redirect('/result');
+
+
+    if (!voting_started && !voting_ended) {
+        startVote()
+    }
+});
 router.post('/restart', (req, res) => {
     res.redirect('/');
     startVote()
@@ -30,7 +41,9 @@ router.post('/restart', (req, res) => {
 module.exports = router;
 
 function startVote() {
+    console.log('voting has started')
     voting_ended = false
+    voting_started = true
         // timer for voting perioud 300000
     setTimeout(function() {
 
@@ -39,9 +52,8 @@ function startVote() {
             if (err) throw err;
         });
         voting_ended = true
+        voting_started = false
         console.log("voting ended");
 
     }, 50000);
 }
-
-startVote();
