@@ -23,6 +23,7 @@ router.get('/result', votesController.getAllVotes)
 
 // requests
 router.post('/login', (req, res) => {
+
     if (!voting_ended)
         votesController.castVote(req, res);
     else
@@ -31,11 +32,12 @@ router.post('/login', (req, res) => {
 
     if (!voting_started && !voting_ended) {
         startVote()
-    }
+    };
 });
+
 router.post('/restart', (req, res) => {
     res.redirect('/');
-    startVote()
+    voting_ended = false
 })
 
 module.exports = router;
@@ -55,5 +57,5 @@ function startVote() {
         voting_started = false
         console.log("voting ended");
 
-    }, 50000);
+    }, 300000);
 }

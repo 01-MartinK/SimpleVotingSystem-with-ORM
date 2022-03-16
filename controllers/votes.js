@@ -2,11 +2,11 @@ const con = require('../utils/db');
 
 const castVote = (req, res) => {
     let firstName = req.body.firstName;
-    console.log(firstName)
+    console.log('eesnimi: ' + firstName)
     let familyName = req.body.familyName;
-    console.log(familyName)
+    console.log('perenimi:' + familyName)
     let vote = req.body.vote;
-    console.log(vote)
+    console.log('otsus: ' + vote)
 
 
 
