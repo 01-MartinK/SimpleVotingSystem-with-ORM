@@ -3,22 +3,21 @@ extends default
 block content
     div.container
         div.loginBox
-            h1 Enter Credentials
+            h1 Lisa Andmed
             form(method="post" action="/login")
-                label Eesnimi:
-                input(type="text" name="firstName" placeholder="sisestage Eesnimi")
-                label Perenimi:
-                input(type="text" name="familyName" placeholder="sisestage Perenimi")
-                label Email:
-                input(type="text" name="email" placeholder="sisestage Email")
+                label Isikukood
+                input(type="text" minlength=11 maxlength=11)#isikField
+                label Telefon 
+                input(type="number")
                 br
                 br
-                label.center.big Haaleta
+                label.center.big Erakonnad
                 div#voteBox
-                    label poolt
-                    input(type="radio" name="vote" id="with" value="poolt")
-                    label vastu
-                    input(type="radio" name="vote" id="against" value="vastu")
-                input(type="submit" value="Haaleta")#submitCredentials
+                    button.voteBtn EKRE
+                    button.voteBtn Keskerakond
+                    button.voteBtn Eesti 2000
+                    button.voteBtn Republicans
+                input(type="submit" value="Hääleta")#submitCredentials
             if error 
-                p#error VOTE INVALID
+                p#error Viga
+                p.error#dataError Mitte kehtiv ID

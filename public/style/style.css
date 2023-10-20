@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: darkgrey;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -45,13 +46,13 @@ body {
 /*        LOGIN      */
 
 .loginBox {
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     margin: 2em auto;
     width: 25%;
     padding: 2em;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 2px 4px 4px gainsboro;
+    box-shadow: 0px 0px 4px gainsboro;
 }
 
 .loginBox h1 {
@@ -78,16 +79,15 @@ body {
     margin-bottom: 0;
     margin: auto auto;
     margin-top: 1em;
+    background-color:yellowgreen;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
     height: 3em;
     width: 16em;
     display: block;
     text-align: center;
-}
-
-.loginBox #submitCredentials:hover {
-    font-size: medium;
-    background-color: ghostwhite;
-    border: 1px solid black;
+    color: aliceblue;
 }
 
 #viewResults {
@@ -156,8 +156,21 @@ body {
 #voteBox {
     padding: 0.5em;
     display: flex;
+    gap: 0.75rem;
+    flex-direction: column;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+
+.voteBtn {
+    padding: 1em;
+    font-size: medium;
+    border: none;
+}
+
+.voteBtn:hover {
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 span {

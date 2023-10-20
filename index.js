@@ -28,4 +28,5 @@ app.use('/result', mainRouter);
 
 const server = app.listen(3010, () => {
     console.log(`Express running -> PORT ${server.address().port}`)
+    console.log(`http://localhost:${server.address().port}`)
 });

@@ -13,28 +13,21 @@ if ((cur_date.getDay() - last_time) < 1) {
     }
 }
 
+function check() {
+    let id = document.querySelector('#isikField').value
+    if (id.length() != 11)
+        return false;
+    else
+        return true;
+}
+
 // send against vote
-$('#againstBtn').click(function() {
+$('#submitCredentials').click(function() {
     $.ajax({
         url: '/answer',
         method: 'post',
         dataType: 'json',
         data: { 'with': false },
-    });
-    setTimeout(function() {
-        alert('redirecting with vote')
-        window.location.href = "/result";
-    }, 1000);
-});
-
-
-// send with vote
-$('#withBtn').click(function() {
-    $.ajax({
-        url: '/answer',
-        method: 'post',
-        dataType: 'json',
-        data: { 'with': true },
     });
     setTimeout(function() {
         alert('redirecting with vote')
